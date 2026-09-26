@@ -233,7 +233,7 @@ item_table: Dict[str, WOLItemData] = {
     "Sigiled Pistol": WOLItemData(ItemClassification.useful, {"Gear", "Pistols"}),
     "Silver Pistol": WOLItemData(ItemClassification.useful, {"Gear", "Pistols"}),
     "Smoking Gun": WOLItemData(ItemClassification.useful, {"Gear", "Pistols"}),
-    "The Worst Gun": WOLItemData(ItemClassification.useful, {"Gear", "Pistols"}, is_dlc=True),
+    "The Worst Gun": WOLItemData(ItemClassification.filler, {"Gear", "Pistols"}, is_dlc=True),
     "Toilet Pistol": WOLItemData(ItemClassification.useful, {"Gear", "Pistols"}),
     "Ancient Ring": WOLItemData(ItemClassification.useful, {"Gear", "Rings"}),
     "Bone-Chip Ring": WOLItemData(ItemClassification.useful, {"Gear", "Rings"}),
