@@ -458,7 +458,7 @@ def set_location_rules(world: "WOLWorld") -> None:
     set_rule(world.get_location("Circus - Slide Whistle Reward"),
              lambda state: state.has("Slide Whistle", player))
     set_rule(world.get_location("Circus Kid - Lucky Cap Trade"),
-             lambda state: state.has("Balloon", player))
+             lambda state: (state.has("Balloon", player) and state.has("Lucky Cap", player)))
     set_rule(world.get_location("Circus - Survived the Main Act"),
              lambda state: state.has("Circus Show Ticket", player))
     set_rule(world.get_location("Circus Destroyed - Barnaby Bob's Safe"),
