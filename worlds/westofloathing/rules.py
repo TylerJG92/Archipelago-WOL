@@ -253,6 +253,8 @@ def set_region_rules(world: "WOLWorld") -> None:
 
     world.get_entrance("Map Region H -> Curious False Mountain").access_rule = \
         lambda state: state.has("El Vibrato Transponder", player)
+    world.get_entrance("Map Region H -> Curious Flat Plain").access_rule = \
+        lambda state: state.has("El Vibrato Transponder", player)
 
     world.get_entrance("Deepest Delve Mine -> Deepest Delve Mine (Elevator Fixed)").access_rule = \
         lambda state: ((state.has("Can Of Kerosene", player) and state.has("Gas Cap", player)) or
