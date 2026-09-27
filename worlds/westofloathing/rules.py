@@ -216,7 +216,7 @@ def set_region_rules(world: "WOLWorld") -> None:
 
     world.get_entrance("Curious Abandoned Well -> Curious Abandoned Well Facility").access_rule = \
         lambda state: (state.has("A Length Of Rope", player) and
-                       state.can_reach_location("El Vibrato Ruin - Cylinder", player) and
+                       state.can_reach_location("El Vibrato Ruin (Lost Dutch Oven Mine) - Cylinder", player) and
                        state.has("El Vibrato Cylinder (Lost Dutch Oven Mine)", player))
 
     world.get_entrance("Postal Way Station -> Chuck's House").access_rule = \
@@ -437,7 +437,7 @@ def set_location_rules(world: "WOLWorld") -> None:
              lambda state: (has_stench_resistance(state, world) and
                             (state.has("Percussive Maintenance", player) or state.has("Can Of Oil", player)) and
                             has_elv_keystone_source(state, world)))
-    set_rule(world.get_location("El Vibrato Ruin - Cylinder"),
+    set_rule(world.get_location("El Vibrato Ruin (Lost Dutch Oven Mine) - Cylinder"),
              lambda state: (has_stench_resistance(state, world) and
                             (state.has("Percussive Maintenance", player) or state.has("Can Of Oil", player)) and
                             has_elv_keystone_source(state, world) and
@@ -583,12 +583,12 @@ def set_location_rules(world: "WOLWorld") -> None:
     set_rule(world.get_location("Jumbleneck Mine (Right Tunnel) - Idol"),
              lambda state: (state.has("Unstable Stick Of Dynamite", player) and
                             state.has("Bag Of Grease", player)))
-    set_rule(world.get_location("El Vibrato Construction Facility - BUGAANZEVE"),
+    set_rule(world.get_location("El Vibrato Construction Facility (Curious Copse) - BUGAANZEVE"),
              lambda state: (has_stench_resistance(state, world) and #In addition to getting to Curious Copse, need to activate machine in El Vibrato Ruin
                             (state.has("Percussive Maintenance", player) or state.has("Can Of Oil", player)) and
                             has_elv_keystone_source(state, world) and
                             has_elv_battery_source(state, world)))
-    set_rule(world.get_location("El Vibrato Construction Facility - HOSOM NOAN NOFU"),
+    set_rule(world.get_location("El Vibrato Construction Facility (Curious Copse) - HOSOM NOAN NOFU"),
              lambda state: (has_stench_resistance(state, world) and #In addition to getting to Curious Copse, need to activate machine in El Vibrato Ruin
                             (state.has("Percussive Maintenance", player) or state.has("Can Of Oil", player)) and
                             has_elv_keystone_source(state, world) and
@@ -696,11 +696,11 @@ def set_location_rules(world: "WOLWorld") -> None:
                             state.can_reach_region("Dr. Morton's House", player) and
                             state.has("Interesting Rock", player) and
                             state.has("Weird Rock Sample", player)))
-    set_rule(world.get_location("El Vibrato Storage Room - Card Table (Item 1)"),
+    set_rule(world.get_location("El Vibrato Storage Room (Abandoned Mine) - Card Table (Item 1)"),
              lambda state: state.has("El Vibrato Transponder", player) and state.has("Pickaxe", player))
-    set_rule(world.get_location("El Vibrato Storage Room - Card Table (Item 2)"),
+    set_rule(world.get_location("El Vibrato Storage Room (Abandoned Mine) - Card Table (Item 2)"),
              lambda state: state.has("El Vibrato Transponder", player) and state.has("Pickaxe", player))
-    set_rule(world.get_location("El Vibrato Storage Room - Cylinder"),
+    set_rule(world.get_location("El Vibrato Storage Room (Abandoned Mine) - Cylinder"),
              lambda state: state.has("El Vibrato Transponder", player) and state.has("Pickaxe", player))
     set_rule(world.get_location("Morton's Quarry (Tiny Diverticulum) - Hex Puzzle"),
              lambda state: (state.can_reach_region("Frisco", player) and
@@ -740,10 +740,10 @@ def set_location_rules(world: "WOLWorld") -> None:
              lambda state: state.has("El Vibrato Cylinder (Curious Flat Plain)", player,))
     set_rule(world.get_location("Deepest Delve Mine (Alt Entrance) - Bean-Iron Deposit"),
              lambda state: state.has("Beans Illustrated", player) and state.has("Pickaxe", player))
-    set_rule(world.get_location("El Vibrato Control Center - El Vibrato Quest Completion"),
+    set_rule(world.get_location("El Vibrato Control Center (Deepest Delve Mine) - El Vibrato Quest Completion"),
              lambda state: (state.has("Pickaxe", player) and
                             state.has("El Vibrato Cross", player) and
-                            state.can_reach_location("El Vibrato Ruin - Cylinder", player) and
+                            state.can_reach_location("El Vibrato Ruin (Lost Dutch Oven Mine) - Cylinder", player) and
                             state.can_reach_region("Curious False Mountain", player) and
                             state.can_reach_region("Curious Flat Plain", player) and
                             state.has("El Vibrato Cylinder (Lost Dutch Oven Mine)", player) and
