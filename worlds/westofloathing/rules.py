@@ -456,7 +456,7 @@ def set_location_rules(world: "WOLWorld") -> None:
              lambda state: state.has("Balloon", player))
     set_rule(world.get_location("Circus - Survived the Main Act"),
              lambda state: state.has("Circus Show Ticket", player))
-    set_rule(world.get_location("Circus - Barnaby Bob's Safe"),
+    set_rule(world.get_location("Circus Destroyed - Barnaby Bob's Safe"),
              lambda state: (state.can_reach_region("Fort Alldead", player) and
                             state.has("Toy Skeletons", player)))
     set_rule(world.get_location("Breadwood Bunkhouse - Footlocker"),
