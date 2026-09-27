@@ -390,15 +390,15 @@ def set_location_rules(world: "WOLWorld") -> None:
                             state.has("Toy Skeletons", player)))
     set_rule(world.get_location("Railroad Camp (East) - Rock Monster's Remains (Dr. Morton's Quest)"),
              lambda state: state.can_reach_region("Frisco", player))
-    set_rule(world.get_location("Kole Ridge Mine (Level 2) - Triangular Stones"),
+    set_rule(world.get_location("Kaye Ridge Mine (Level 2) - Triangular Stones"),
              lambda state: (state.has("A Length Of Rope", player) and
                             state.has("Shovel", player) and
                             state.can_reach_region("Butterfield Ranch", player)))
-    set_rule(world.get_location("Kole Ridge Mine (Level 2) - Bean-Iron Deposit"),
+    set_rule(world.get_location("Kaye Ridge Mine (Level 2) - Bean-Iron Deposit"),
              lambda state: (state.has("A Length Of Rope", player) and
                             state.has("Beans Illustrated", player) and
                             state.has("Pickaxe", player)))
-    set_rule(world.get_location("Kole Ridge Mine (Level 3) - Pick-Head"),
+    set_rule(world.get_location("Kaye Ridge Mine (Level 3) - Pick-Head"),
              lambda state: state.has("A Length Of Rope", player))
     set_rule(world.get_location("Butterfield Ranch Barn - Milk Shelf"),
              lambda state: state.has("Locks And How To Pick Them", player))
