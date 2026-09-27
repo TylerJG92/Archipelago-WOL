@@ -570,6 +570,8 @@ def set_location_rules(world: "WOLWorld") -> None:
              lambda state: state.has("Locks And How To Pick Them", player))
     set_rule(world.get_location("Fort Treason Barracks - Bottom-Right Footlocker"),
              lambda state: state.has("Locks And How To Pick Them", player))
+    set_rule(world.get_location("Hellstrom Ranch - Lucky Horseshoe"),
+             lambda state: state.can_reach_region("Hellstrom Ranch", player))
     set_rule(world.get_location("Jumbleneck Mine - Grease Barrel"),
              lambda state: state.has("Paper Bag", player))
     set_rule(world.get_location("Jumbleneck Mine Foreman's Office - Safe (Item 1)"),
