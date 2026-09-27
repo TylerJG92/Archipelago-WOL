@@ -217,7 +217,7 @@ def set_region_rules(world: "WOLWorld") -> None:
     world.get_entrance("Curious Abandoned Well -> Curious Abandoned Well Facility").access_rule = \
         lambda state: (state.has("A Length Of Rope", player) and
                        state.can_reach_location("El Vibrato Ruin - Cylinder", player) and
-                       state.has("El Vibrato Cylinder", player, 3)) #Only need one for this location, but need to require all 3 to guarantee you haven't spent it somewhere else
+                       state.has("El Vibrato Cylinder (Lost Dutch Oven Mine)", player))
 
     world.get_entrance("Postal Way Station -> Chuck's House").access_rule = \
         lambda state: state.has("Postal Code Sheet", player)
@@ -733,19 +733,22 @@ def set_location_rules(world: "WOLWorld") -> None:
     set_rule(world.get_location("Jeweler's Cabin - Spectacles"),
              lambda state: state.can_reach_region("Fort Unnecessary", player))
     set_rule(world.get_location("El Vibrato Chamber (Curious False Mountain) - Chronokey Fabrication"),
-             lambda state: state.has("El Vibrato Cylinder", player, 3))
+             lambda state: state.has("El Vibrato Cylinder (Curious False Mountain)", player,))
     set_rule(world.get_location("Alamo Rent-A-Mule - Rented a Mule"),
              lambda state: state.can_reach_region("Fort Unnecessary", player))
     set_rule(world.get_location("Curious Flat Plain - Garbage Return"),
-             lambda state: state.has("El Vibrato Cylinder", player, 3))
+             lambda state: state.has("El Vibrato Cylinder (Curious Flat Plain)", player,))
     set_rule(world.get_location("Deepest Delve Mine (Alt Entrance) - Bean-Iron Deposit"),
              lambda state: state.has("Beans Illustrated", player) and state.has("Pickaxe", player))
     set_rule(world.get_location("El Vibrato Control Center - El Vibrato Quest Completion"),
              lambda state: (state.has("Pickaxe", player) and
                             state.has("El Vibrato Cross", player) and
+                            state.can_reach_location("El Vibrato Ruin - Cylinder", player) and
                             state.can_reach_region("Curious False Mountain", player) and
                             state.can_reach_region("Curious Flat Plain", player) and
-                            state.has("El Vibrato Cylinder", player, 3)))
+                            state.has("El Vibrato Cylinder (Lost Dutch Oven Mine)", player) and
+                            state.has("El Vibrato Cylinder (Curious False Mountain)", player) and
+                            state.has("El Vibrato Cylinder (Curious Flat Plain)", player)))
     set_rule(world.get_location("Halloway's Hideaway - Half of Curly's Map"),
              lambda state: (state.has("Left Half Of Curly's Map", player) and
                             state.has("Halloway's Pin", player)))
@@ -773,6 +776,7 @@ def set_location_rules(world: "WOLWorld") -> None:
              lambda state: state.has("Charred Locket", player) and state.has("Locks And How To Pick Them", player))
 
     #Same deal here as with the El Vibrato cylinders, only need one for each of these locations but need to guarantee all 3 are accessible before spending on any given check
+    #The El Vibrato Cylinders no longer need maxed numbered checks but you get it.
     set_rule(world.get_location("Master Cookery Crafting - Level 1 (Badge)"),
              lambda state: state.has("Bean-Iron Nugget", player, 3))
     set_rule(world.get_location("Master Cookery Crafting - Level 1 (Skillet)"),
