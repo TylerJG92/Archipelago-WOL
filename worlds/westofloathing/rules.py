@@ -169,7 +169,7 @@ def set_region_rules(world: "WOLWorld") -> None:
     options = world.options
 
     world.get_entrance("Dirtwater -> Tony's Boots").access_rule = \
-        lambda state: (state.can_reach_region("Fort of Darkness", player) and
+        lambda state: ((state.can_reach_region("Fort of Darkness", player) or state.has("Mushroom Map", player)) and
                        state.has("A Bunch Of Really Small Guns", player))
     world.get_entrance("Dirtwater -> Murray's Curiosity & Bean").access_rule = \
         lambda state: can_save_murray(state, world)
@@ -188,6 +188,8 @@ def set_region_rules(world: "WOLWorld") -> None:
     #you can always just kill 'em, so by default there's the option for basically free progression up to the pickle factory
 
     #TODO: Unlocking the door to the Silversmith's House requires a needle but not Lockpickin', but don't have a good way to consider needles for logic yet
+    #Player dosent need a better way to get needles, there is a table infront of the silversmiths house to craft needles from junk items
+    #they are already getting from the game.
     #world.get_entrance("Silversmith's House -> The Silver Plater").access_rule = \
     #    lambda state: state.has("needle", player)
 
@@ -321,6 +323,9 @@ def set_location_rules(world: "WOLWorld") -> None:
              lambda state: state.has("Beans Illustrated", player) and state.has("Pickaxe", player))
 
     #TODO: Unlocking the door to the Silversmith's House requires a needle but not Lockpickin', but don't have a good way to consider needles for logic yet
+    #Leaving here as a note for others, the player can make needles in front of the silversmiths house and gets plenty of items that
+    #they can use to turn into needles
+    #
     #set_rule(world.get_location("Silversmith's House - Spittoon"),
     #         lambda state: state.has("Locks And How To Pick Them", player))
     #set_rule(world.get_location("Silversmith's House - Shelf (Item 1)"),
