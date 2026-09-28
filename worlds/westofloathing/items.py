@@ -453,7 +453,7 @@ item_table: Dict[str, WOLItemData] = {
     "Mint Mint Jellybeans": WOLItemData(ItemClassification.progression, {"Quest Items"}),
     "Mrs. Gun's Blueprint": WOLItemData(ItemClassification.progression, {"Quest Items"}, is_dlc=True),
     "Mule Rental Contract": WOLItemData(ItemClassification.useful, {"Quest Items"}),
-    "Mushroom Map": WOLItemData(ItemClassification.filler, {"Quest Items"}),
+    "Mushroom Map": WOLItemData(ItemClassification.progression, {"Quest Items"}),
     "Mushroom Plucking Pliers": WOLItemData(ItemClassification.progression, {"Quest Items"}),
     "Nearly-Empty Herbicide Can": WOLItemData(ItemClassification.filler, {"Quest Items"}, is_dlc=True),
     "Overdue Breadwood Book": WOLItemData(ItemClassification.progression, {"Quest Items"}),
