@@ -575,11 +575,9 @@ def set_location_rules(world: "WOLWorld") -> None:
     set_rule(world.get_location("Jumbleneck Mine - Grease Barrel"),
              lambda state: state.has("Paper Bag", player))
     set_rule(world.get_location("Jumbleneck Mine Foreman's Office - Safe (Item 1)"),
-             lambda state: (state.has("Silver-Toothed Skull", player) or
-                            state.has("Get Crackin': A Guide To Modern Safes", player)))
+             lambda state: (state.has("Get Crackin': A Guide To Modern Safes", player)))
     set_rule(world.get_location("Jumbleneck Mine Foreman's Office - Safe (Item 2)"),
-             lambda state: (state.has("Silver-Toothed Skull", player) or
-                            state.has("Get Crackin': A Guide To Modern Safes", player)))
+             lambda state: (state.has("Get Crackin': A Guide To Modern Safes", player)))
     set_rule(world.get_location("Jumbleneck Mine (Left Tunnel) - Bean-Iron Deposit"),
              lambda state: state.has("Beans Illustrated", player) and state.has("Pickaxe", player))
     set_rule(world.get_location("Jumbleneck Mine (Right Tunnel) - Idol"),
