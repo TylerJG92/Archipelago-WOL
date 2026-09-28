@@ -418,7 +418,7 @@ location_table: Dict[str, WOLLocationData] = {
     "Deepest Delve Mine (Alt Entrance) - Toolbox": WOLLocationData("Deepest Delve Mine", "Deepest Delve Mine"),
     "Deepest Delve Mine (Alt Entrance) - Bean-Iron Deposit": WOLLocationData("Deepest Delve Mine", "Deepest Delve Mine"),
     "Deepest Delve Mine (Level 2) - Cult Altar": WOLLocationData("Deepest Delve Mine (Elevator Fixed)", "Deepest Delve Mine"),
-    "Deepest Delve Mine (Level 2) - Bracelet": WOLLocationData("Deepest Delve Mine (Elevator Fixed)", "Deepest Delve Mine"),
+    "Deepest Delve Mine (Level 3) - Bracelet": WOLLocationData("Deepest Delve Mine (Elevator Fixed)", "Deepest Delve Mine"),
     "El Vibrato Control Center (Deepest Delve Mine) - El Vibrato Quest Completion": WOLLocationData("Deepest Delve Mine (Elevator Fixed)", "Deepest Delve Mine"),
     "Halloway's Hideaway - Shop Item 1": WOLLocationData("Halloway's Hideaway", "Halloway's Hideaway"),
     "Halloway's Hideaway - Shop Item 2": WOLLocationData("Halloway's Hideaway", "Halloway's Hideaway"),
