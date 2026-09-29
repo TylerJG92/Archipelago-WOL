@@ -532,7 +532,7 @@ item_table: Dict[str, WOLItemData] = {
     "Silver Nugget x5": WOLItemData(ItemClassification.filler, {"Miscellany"}, extras_eligible=True),
     "Handful Of Nails x4": WOLItemData(ItemClassification.progression, {"Miscellany"}),
     "Stock Certificate x3": WOLItemData(ItemClassification.filler, {"Miscellany"}, 2, extras_eligible=True),
-    "Human Ashes x2": WOLItemData(ItemClassification.progression, {"Quest Items"}, extras_eligible=True),
+    "Human Ashes x2": WOLItemData(ItemClassification.progression, {"Quest Items"}, 2),
     "Cheap Wine x11": WOLItemData(ItemClassification.filler, {"Consumables", "Booze"}, extras_eligible=True),
     "Sulphur Match x4": WOLItemData(ItemClassification.progression, {"Consumables", "Combat"}, extras_eligible=True), #TODO: Replace with an infinite matchbook only usable for check requirements?
     "Military Medical Supplies": WOLItemData(ItemClassification.filler, {"Consumables", "Combat", "Booze"}, extras_eligible=True),
