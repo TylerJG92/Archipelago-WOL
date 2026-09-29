@@ -823,7 +823,8 @@ def set_location_rules(world: "WOLWorld") -> None:
              lambda state: (state.has("Basics Of Gun Law", player) and
                             state.has("Duel Law", player) and
                             state.has("1878 Nautical Almanac", player) and
-                            state.has("Shovel", player)))
+                            state.has("Shovel", player) and
+                            state.can_reach_region("Gun Manor Art Gallery", player)))
 
         set_rule(world.get_location("Back of Gun Manor - Compost Heap"),
              lambda state: has_stench_resistance(state, world))
