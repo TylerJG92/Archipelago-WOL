@@ -271,6 +271,8 @@ def set_region_rules(world: "WOLWorld") -> None:
         lambda state: state.can_reach_region("Map Region G", player)
     world.get_entrance("Miscellaneous -> Master Cookery Crafting").access_rule = \
         lambda state: can_cook(state, world)
+
+    
     world.get_entrance("Soupstock Lode -> El Vibrato Chamber (SL)").access_rule = \
         lambda state: ((state.has("Percussive Maintenance", player) or state.has("Monkey Wrench", player)) and
                         state.has("Pickaxe", player) and
