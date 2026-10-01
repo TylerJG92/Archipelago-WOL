@@ -275,8 +275,7 @@ def set_region_rules(world: "WOLWorld") -> None:
     
     world.get_entrance("Soupstock Lode -> El Vibrato Chamber (SL)").access_rule = \
         lambda state: ((state.has("Percussive Maintenance", player) or state.has("Monkey Wrench", player)) and
-                        state.has("Pickaxe", player) and
-                        state.has("El Vibrato Transponder", player))
+                        state.has("Pickaxe", player))
 
     if options.dlc_enabled:
         if options.randomize_ghost_coach:
@@ -528,6 +527,14 @@ def set_location_rules(world: "WOLWorld") -> None:
              lambda state: state.has("Beans Illustrated", player) and state.has("Pickaxe", player))
     set_rule(world.get_location("El Vibrato Chamber (Soupstock Lode) - Chest"),
              lambda state: state.has(has_elv_keystone_source(state, world)))
+    set_rule(world.get_location("El Vibrato Vending Machine (Soupstock Lode) - KROKUZ CHOTAZAK"),
+             lambda state: state.has("El Vibrato Transponder", player))
+    set_rule(world.get_location("El Vibrato Vending Machine (Soupstock Lode) - KROKUZ GACHAKUZ"),
+                 lambda state: state.has("El Vibrato Transponder", player))
+    set_rule(world.get_location("El Vibrato Vending Machine (Soupstock Lode) - KROKUZ NOHONOKSTA"),
+                 lambda state: state.has("El Vibrato Transponder", player))
+    set_rule(world.get_location("El Vibrato Vending Machine (Soupstock Lode) - KROKUZ TASTA STAZAK"),
+                 lambda state: state.has("El Vibrato Transponder", player))
     set_rule(world.get_location("Military Cemetery - 2nd Lt. 69th Innuendo Div. (Combat)"),
              lambda state: state.has("Shovel", player))
     set_rule(world.get_location("Fort Memoriam Barracks - Trash Pile"),
