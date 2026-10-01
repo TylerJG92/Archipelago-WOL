@@ -600,7 +600,7 @@ item_table: Dict[str, WOLItemData] = {
     "NE North Central Logging Permit": WOLItemData(ItemClassification.progression, {"Quest Items"}),
     "Ghost Coach To Gun Manor": WOLItemData(ItemClassification.progression, {"Miscellany"}, is_dlc=True),
     "English-Goblintongue Dictionary": WOLItemData(ItemClassification.progression, {"Books"}),
-    "Can Of Oil": WOLItemData(ItemClassification.progression, {"Miscellany"}, extras_eligible=True),
+    "Can Of Oil": WOLItemData(ItemClassification.filler, {"Miscellany"}, extras_eligible=True),
     "Packet Of Cowsbane Seeds": WOLItemData(ItemClassification.progression, {"Quest Items"}),
     "Lactarius Dirtihippica mushroom x4": WOLItemData(ItemClassification.progression, {"Consumables", "Food", "Quest Items"}),
     "Silver-Toothed Skull": WOLItemData(ItemClassification.useful, {"Quest Items"})

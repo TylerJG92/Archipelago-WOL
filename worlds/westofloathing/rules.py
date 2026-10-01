@@ -33,7 +33,7 @@ def can_save_murray(state: CollectionState, world: "WOLWorld") -> bool:
 
     return (state.can_reach_region("Lost Dutch Oven Mine", player) and
             has_stench_resistance(state, world, True) and
-            (state.has("Percussive Maintenance", player) or state.has("Can Of Oil", player)) and
+            state.has("Percussive Maintenance", player) and
             state.has("El Vibrato Headband", player))
 
 #For bonus items (from having another shop to the right), need to require all shops to know that any given shop isn't the rightmost,
@@ -247,7 +247,7 @@ def set_region_rules(world: "WOLWorld") -> None:
         lambda state: state.has("Comedy Flier", player)
 
     world.get_entrance("Abandoned Mine -> Abandoned Mine (Inside)").access_rule = \
-        lambda state: ((state.has("Can Of Oil", player) and state.has("Monkey Wrench", player)) or
+        lambda state:  (state.has("Monkey Wrench", player) or
                        state.has("Percussive Maintenance", player))
 
     world.get_entrance("Dr. Morton's House -> Old Cave").access_rule = \
@@ -427,19 +427,19 @@ def set_location_rules(world: "WOLWorld") -> None:
              lambda state: has_stench_resistance(state, world))
     set_rule(world.get_location("Lost Dutch Oven Mine (Pit) - Emerald Rock"),
              lambda state: (has_stench_resistance(state, world) and
-                            (state.has("Percussive Maintenance", player) or state.has("Can Of Oil", player)) and
+                            state.has("Percussive Maintenance", player) and
                             state.has("Pickaxe", player)))
     set_rule(world.get_location("El Vibrato Chamber (Lost Dutch Oven Mine) - Leftmost Box"),
              lambda state: (has_stench_resistance(state, world) and
-                            (state.has("Percussive Maintenance", player) or state.has("Can Of Oil", player)) and
+                            state.has("Percussive Maintenance", player) and
                             has_elv_keystone_source(state, world)))
     set_rule(world.get_location("El Vibrato Chamber (Lost Dutch Oven Mine) - Locked Box"),
              lambda state: (has_stench_resistance(state, world) and
-                            (state.has("Percussive Maintenance", player) or state.has("Can Of Oil", player)) and
+                            state.has("Percussive Maintenance", player) and
                             has_elv_keystone_source(state, world)))
     set_rule(world.get_location("El Vibrato Ruin (Lost Dutch Oven Mine) - Cylinder"),
              lambda state: (has_stench_resistance(state, world) and
-                            (state.has("Percussive Maintenance", player) or state.has("Can Of Oil", player)) and
+                            state.has("Percussive Maintenance", player) and
                             has_elv_keystone_source(state, world) and
                             has_elv_battery_source(state, world)))
     set_rule(world.get_location("Fort Alldead - Trash Can"),
@@ -585,12 +585,12 @@ def set_location_rules(world: "WOLWorld") -> None:
                             state.has("Bag Of Grease", player)))
     set_rule(world.get_location("El Vibrato Construction Facility (Curious Copse) - BUGAANZEVE"),
              lambda state: (has_stench_resistance(state, world) and #In addition to getting to Curious Copse, need to activate machine in El Vibrato Ruin
-                            (state.has("Percussive Maintenance", player) or state.has("Can Of Oil", player)) and
+                            state.has("Percussive Maintenance", player) and
                             has_elv_keystone_source(state, world) and
                             has_elv_battery_source(state, world)))
     set_rule(world.get_location("El Vibrato Construction Facility (Curious Copse) - HOSOM NOAN NOFU"),
              lambda state: (has_stench_resistance(state, world) and #In addition to getting to Curious Copse, need to activate machine in El Vibrato Ruin
-                            (state.has("Percussive Maintenance", player) or state.has("Can Of Oil", player)) and
+                            state.has("Percussive Maintenance", player) and
                             has_elv_keystone_source(state, world) and
                             has_elv_battery_source(state, world)))
     set_rule(world.get_location("Curious Abandoned Well Facility (Secondary Storage) - Top Chest"),
