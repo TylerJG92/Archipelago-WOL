@@ -33,7 +33,6 @@ def can_save_murray(state: CollectionState, world: "WOLWorld") -> bool:
 
     return (state.can_reach_region("Lost Dutch Oven Mine", player) and
             has_stench_resistance(state, world, True) and
-            state.has("Percussive Maintenance", player) and
             state.has("El Vibrato Headband", player))
 
 #For bonus items (from having another shop to the right), need to require all shops to know that any given shop isn't the rightmost,
@@ -435,15 +434,12 @@ def set_location_rules(world: "WOLWorld") -> None:
                             state.has("Pickaxe", player)))
     set_rule(world.get_location("El Vibrato Chamber (Lost Dutch Oven Mine) - Leftmost Box"),
              lambda state: (has_stench_resistance(state, world) and
-                            state.has("Percussive Maintenance", player) and
                             has_elv_keystone_source(state, world)))
     set_rule(world.get_location("El Vibrato Chamber (Lost Dutch Oven Mine) - Locked Box"),
              lambda state: (has_stench_resistance(state, world) and
-                            state.has("Percussive Maintenance", player) and
                             has_elv_keystone_source(state, world)))
     set_rule(world.get_location("El Vibrato Ruin (Lost Dutch Oven Mine) - Cylinder"),
              lambda state: (has_stench_resistance(state, world) and
-                            state.has("Percussive Maintenance", player) and
                             has_elv_keystone_source(state, world) and
                             has_elv_battery_source(state, world)))
     set_rule(world.get_location("Fort Alldead - Trash Can"),
