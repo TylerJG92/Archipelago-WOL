@@ -491,23 +491,23 @@ def set_location_rules(world: "WOLWorld") -> None:
     
     set_rule(world.get_location("Ghostwood Jail - Stapled Report"),
              lambda state: state.can_reach_location("Ghostwood Office Supply - Stapler", player) and
-                           state.has("Ghostwood Visitor's Permit", player))
+                           state.has("Ghost Stapler", player)) ##needs this for all checks going forward
     
     set_rule(world.get_location("Ghostwood Stable - Got IDDTF"),
              lambda state: state.can_reach_location("Ghostwood Jail - Stapled Report", player) and
-                           state.has("Breadwood Logging Report", player))
+                           state.has("Breadwood Logging Report", player)) ##need this for future checks
     
     set_rule(world.get_location("Ghostwood Salooooon - Staple Remover"),
              lambda state: state.can_reach_location("Ghostwood Stable - Got IDDTF", player) and
-                           state.has("Breadwood Logging Report Folder", player))
+                           state.has("Breadwood Logging Report Folder", player)) ##need this for future checks
     
     set_rule(world.get_location("Ghostwood Town Hall - The Final Form"),
              lambda state: state.can_reach_location("Ghostwood Salooooon - Staple Remover", player) and
-                           state.has("Ghost Staple Remover", player))
+                           state.has("Ghost Staple Remover", player)) ##need this for future checks
     
     set_rule(world.get_location("Ghostwood Town Hall - Permit Finally Processed"),
              lambda state: state.can_reach_location("Ghostwood Town Hall - The Final Form", player) and
-                           state.has("Breadwood Logging Permit Forms", player))
+                           state.has("Breadwood Logging Permit Forms", player)) ##need this and everything else for this to be in logic.
     
     set_rule(world.get_location("Ghostwood Salooooon - Whiskey Bottle"),
              lambda state: state.has("Ghostwood Visitor's ID", player) and
@@ -521,14 +521,14 @@ def set_location_rules(world: "WOLWorld") -> None:
              lambda state: state.has("Beans Illustrated", player) and state.has("Pickaxe", player))
     set_rule(world.get_location("El Vibrato Chamber (Soupstock Lode) - Chest"),
              lambda state: has_elv_keystone_source(state, world))
-    set_rule(world.get_location("El Vibrato Vending Machine (Soupstock Lode) - KROKUZ CHOTAZAK"),
+    set_rule(world.get_location("El Vibrato Chamber (Soupstock Lode) - Vending Machine KROKUZ CHOTAZAK"),
              lambda state: state.has("El Vibrato Transponder", player))
-    set_rule(world.get_location("El Vibrato Vending Machine (Soupstock Lode) - KROKUZ GACHAKUZ"),
-                 lambda state: state.has("El Vibrato Transponder", player))
-    set_rule(world.get_location("El Vibrato Vending Machine (Soupstock Lode) - KROKUZ NOHONOKSTA"),
-                 lambda state: state.has("El Vibrato Transponder", player))
-    set_rule(world.get_location("El Vibrato Vending Machine (Soupstock Lode) - KROKUZ TASTA STAZAK"),
-                 lambda state: state.has("El Vibrato Transponder", player))
+    set_rule(world.get_location("El Vibrato Chamber (Soupstock Lode) - Vending Machine KROKUZ GACHAKUZ"),
+             lambda state: state.has("El Vibrato Transponder", player))
+    set_rule(world.get_location("El Vibrato Chamber (Soupstock Lode) - Vending Machine KROKUZ NOHONOKSTA"),
+             lambda state: state.has("El Vibrato Transponder", player))
+    set_rule(world.get_location("El Vibrato Chamber (Soupstock Lode) - Vending Machine KROKUZ TASTA STAZAK"),
+             lambda state: state.has("El Vibrato Transponder", player))
     set_rule(world.get_location("Military Cemetery - 2nd Lt. 69th Innuendo Div. (Combat)"),
              lambda state: state.has("Shovel", player))
     set_rule(world.get_location("Fort Memoriam Barracks - Trash Pile"),
