@@ -478,7 +478,7 @@ def set_location_rules(world: "WOLWorld") -> None:
     set_rule(world.get_location("Ghostwood - Sharpened Pencil"),
              lambda state: state.has("Ghost Pencil", player)) ##player needs this for issued permit
     
-    set_rule(world.get_location("Ghostwood Town Hall - Issued Permit", player),
+    set_rule(world.get_location("Ghostwood Town Hall - Issued Permit"),
              lambda state: state.can_reach_location("Ghostwood - Sharpened Pencil", player) and
                            state.can_reach_location("Ghostwood - Ghost Cactus", player) and
                            state.has("Sharpened Ghost Pencil", player)) ##player needs this for permit and id issued and going forward
