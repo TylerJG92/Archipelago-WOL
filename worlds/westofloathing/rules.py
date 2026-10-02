@@ -527,7 +527,7 @@ def set_location_rules(world: "WOLWorld") -> None:
     set_rule(world.get_location("Soupstock Lode (Level 1) - Bean-Iron Deposit (Bottom Left)"),
              lambda state: state.has("Beans Illustrated", player) and state.has("Pickaxe", player))
     set_rule(world.get_location("El Vibrato Chamber (Soupstock Lode) - Chest"),
-             lambda state: state.has(has_elv_keystone_source(state, world)))
+             lambda state: has_elv_keystone_source(state, world))
     set_rule(world.get_location("El Vibrato Vending Machine (Soupstock Lode) - KROKUZ CHOTAZAK"),
              lambda state: state.has("El Vibrato Transponder", player))
     set_rule(world.get_location("El Vibrato Vending Machine (Soupstock Lode) - KROKUZ GACHAKUZ"),
