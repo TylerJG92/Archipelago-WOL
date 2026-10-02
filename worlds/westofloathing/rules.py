@@ -518,7 +518,8 @@ def set_location_rules(world: "WOLWorld") -> None:
                            state.has("Ghost Staple Remover", player) and
                            state.has("Breadwood Logging Permit Forms", player))
     set_rule(world.get_location("Ghostwood Salooooon - Whiskey Bottle"),
-             lambda state: state.has("Ghostwood Visitor's ID", player))
+             lambda state: state.has("Ghostwood Visitor's ID", player) and
+                           state.can_reach_location("Ghostwood Town Hall - Issued ID", player))
     set_rule(world.get_location("Soupstock Lode (Level 1) - Workbench Toolbox (Item 1)"),
              lambda state: state.has("Locks And How To Pick Them", player))
     set_rule(world.get_location("Soupstock Lode (Level 1) - Workbench Toolbox (Item 2)"),
